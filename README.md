@@ -1,7 +1,7 @@
 # Virtual Environment
 ## Windows Powershell
-python -m venv .venv
-.\.venv\Scripts\activate.bat
+- python -m venv .venv
+- .\.venv\Scripts\activate.bat
 
 # Install client/server dependencies
 - pip install -r server/requirements.txt
@@ -21,13 +21,13 @@ gcloud config set project project-5bc66b5c-7c93-4826-9f5
 uvicorn server.main:app --host 0.0.0.0 --port 8000
 
 # Running the Local Client Demo
-set URL in client/demo.py: agent_url = "http://localhost:8000"
-Run: python -m client.demo
+- set URL in client/demo.py: agent_url = "http://localhost:8000"
+- Run: python -m client.demo
 
 # Deploying to Cloud Run
-./cloud/deploy_cloud_run.sh
-URL: https://echo-a2a-agent-701351129873.us-central1.run.app
-Run: python -m client.demo
+- ./cloud/deploy_cloud_run.sh
+- URL: https://echo-a2a-agent-701351129873.us-central1.run.app
+- Run: python -m client.demo
 
 #Deploying to Vertex AI Agent Engine
 1. Create the staging bucket
